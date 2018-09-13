@@ -44,7 +44,7 @@ for person in re.findall(p_person, intext):
         #outfile.write(f'{title[0][7:]:50}')
         #outfile.write(f'{email[0]:40}')
         outfile.write('{:25}'.format(name[0]))
-        outfile.write('{:50}'.format(title[0][7:]))
+        outfile.write('{:50}'.format(title[0]))
         outfile.write('{:40}'.format(email[0]))
         if len(phone)>0:
             outfile.write(phone[0][1:])
