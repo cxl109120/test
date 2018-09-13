@@ -115,14 +115,6 @@ def proba(token, table, addone = False):
 
 
 
-
-
-
-
-
-
-
-
 def print_table(dd, delimiter = ' '):
     # print the header
     print(' '*10, end=delimiter)
@@ -143,24 +135,43 @@ def print_table(dd, delimiter = ' '):
 
 
 def main():
-    #print_table(bigram_count1)
+    print('bigram count table for scenario 1')
+    print_table(bigram_count1)
 
-    #print_table(bigram_proba1)
+    print('bigram probability table for scenario 1')
+    print_table(bigram_proba1)
 
-    #print_table(bigram_proba2)
+    print('bigram count table with add one smoothing for scenario 1')
+    print_table(bigram_addone_count1)
 
-    #print_table(bigram_addone_count1)
+    print('bigram probability table with add one smoothing for scenario 1')
+    print_table(bigram_addone_proba1)
 
-    #print_table(bigram_addone_proba1)
 
+    #######################################################
+    print('bigram count table for scenario 2')
+    print_table(bigram_count2)
+
+    print('bigram probability table for scenario 2')
+    print_table(bigram_proba2)
+
+    print('bigram count table with add one smoothing for scenario 2')
+    print_table(bigram_addone_count2)
+
+    print('bigram probability table with add one smoothing for scenario 2')
+    print_table(bigram_addone_proba2)
+
+    #######################################################
     p1 = proba(token1, bigram_proba1)
     p2 = proba(token2, bigram_proba2)
     p1_addone = proba(token1, bigram_addone_proba1, True)
     p2_addone = proba(token2, bigram_addone_proba2, True)
-    print(p1)
-    print(p2)
-    print(p1_addone)
-    print(p2_addone)
+    print('bigram probability for scenario 1: {0}'.format(p1))
+    print('bigram probability for scenario 2: {0}'.format(p2))
+    print('bigram probability with add one smoothing for scenario 1: {0}'.format(p1_addone))
+    print('bigram probability with add one smoothing for scenario 2: {0}'.format(p2_addone))
+
+
 
 if __name__ == '__main__':
     main()
